@@ -81,8 +81,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',         # 你要存储数据的库名，事先要创建之
         'USER': 'root',         # 数据库用户名
-        'PASSWORD': 'qazwsxedc1A!',     # 密码
-        'HOST': 'localhost',    # 主机
+        'PASSWORD': 'qazwsxedc1',     # 密码
+        'HOST': '127.0.0.1',    # 主机
         'PORT': '3306',
     }
 }
