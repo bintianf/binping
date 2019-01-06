@@ -105,3 +105,4 @@ venv.bak/
 blog/blogproject/fabfile.py
 blog/blogproject/blogproject/settings.py
 blog/blogproject/blogproject/settings.py
+blog/blogproject/blogproject/settings.py
