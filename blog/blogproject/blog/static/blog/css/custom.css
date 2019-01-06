@@ -491,7 +491,7 @@ img {
 }
 
 #searchform {
-    position: relative;
+    position: right;
     border: 1px solid #ddd;
     min-height: 42px;
 }

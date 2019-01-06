@@ -279,6 +279,11 @@ def category(request, pk):
     post_list = Post.objects.filter(category=cate)
     return render(request, 'blog/index.html', context={'post_list': post_list})
 
+def tag(request, pk):
+    tag = get_object_or_404(Tag, pk=pk)
+    post_list = Post.objects.filter(tag=tag)
+    return render(request, 'blog/index.html', context={'post_list': post_list})
+
 
 class CategoryView(ListView):
     model = Post
