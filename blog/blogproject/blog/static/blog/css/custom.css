@@ -477,7 +477,7 @@ img {
     top: 8px;
 }
 
-.search-form {
+/*.search-form {
     display: none;
     width: 25%;
     position: absolute;
@@ -485,8 +485,8 @@ img {
     right: -6px;
     top: 33px;
 }
-
-#search-menu span {
+*/
+/*#search-menu span {
     font-size: 20px;
 }
 
@@ -500,13 +500,13 @@ img {
     width: 100%;
     border: none;
     position: absolute;
-    left: 0;
+    right: 0;
     padding: 10px 30px 10px 10px;
     z-index: 99;
 }
 
 #searchform button {
-    position: absolute;
+    position: right;
     right: 6px;
     top: 4px;
     z-index: 999;
@@ -525,7 +525,7 @@ img {
     position: relative;
     top: -6px;
 }
-
+*/
 /**
  * 8.0 - Mobile Menu
  */
