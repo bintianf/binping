@@ -7,18 +7,22 @@
     {% for post in post_list %}
         <article class="post post-{{ post.pk }}">
             <header class="entry-header">
-                <h1 class="entry-title">
+                <h2 class="entry-title">
                     <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
-                </h1>
-                <div class="entry-meta">
-                    <span class="post-category"><a href="#">{{ post.category.name }}</a></span>
-                    <span class="post-date"><a href="#"><time class="entry-date"
-                                                              datetime="{{ post.created_time }}">{{ post.created_time }}</time></a></span>
-                    <span class="post-author"><a href="#">{{ post.author }}</a></span>
-                    <span class="comments-link"><a href="{{ post.get_absolute_url }}#comment-area">{{ post.comment_set.count }} Comments</a></span>
-                    <span class="views-count"><a href="{{ post.get_absolute_url }}">{{ post.views }} Readings</a></span>
-                </div>
+                </h2>
             </header>
+            <div class="info">
+                <ul class="stats">
+                    <li><a href="{{ post.get_absolute_url }}#comment-area" class="fas fa-comments">&nbsp{{ post.comment_set.count }}</a></li>
+                    <li><a href="{{ post.get_absolute_url }}" class="fas fa-mouse-pointer">&nbsp{{ post.views }}</a></li>
+                </ul>
+            </div>
+                <div class="entry-meta">
+                    <span class="post-category"><a href="{% url 'blog:category' post.category.pk %}">{{ post.category.name }}</a></span>
+                    <span class="post-date"><time class="entry-date"
+                                                              datetime="{{ post.created_time }}">发布于：{{ post.created_time }}</time></span>
+                    <span class="post-author">作者：{{ post.author }}</span>
+                </div>
             <div class="entry-content clearfix">
                 <p>{{ post.excerpt }}</p>
                 <div class="read-more cl-effect-14">
