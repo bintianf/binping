@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'uu05m3cd5jl0a=kb*th)+l(hy^@byb3187yprt(bw^!*jwg2%h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', 'localhost ', '.binping.tech']
 
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'haystack',
     'blog',
     'comments',
+    'baby'
 ]
 
 MIDDLEWARE = [
@@ -78,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'blog',         # 你要存储数据的库名，事先要创建之
         'USER': 'root',         # 数据库用户名
-        'PASSWORD': 'root',     # 密码
+        'PASSWORD': 'qazwsxedc1A!',     # 密码
         'HOST': '127.0.0.1',    # 主机
         'PORT': '3306',
     }

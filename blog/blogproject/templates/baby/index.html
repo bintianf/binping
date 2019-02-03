@@ -1,0 +1,57 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bin &amp; Ping baby page</title>
+  <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'blog/css/babymain.css' %}">
+    <script type="text/javascript" src="{% static 'blog/js/modernizr.custom.53451.js' %}"></script>
+    <link rel='stylesheet prefetch' href="{% static 'blog/css/magnific-popup.css' %}">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <nav class="codrops-demos">
+        <a class="current-demo" href="/baby">手动切换</a>
+        <a href="/babyauto">自动切换</a>
+      </nav>
+    </header>
+
+    <section id="dg-container" class="dg-container">
+      <div class="dg-wrapper">
+        <a href="{% static 'blog/images/1.jpg' %}" class="without-caption image-link">
+          <img src="{% static 'blog/images/1.jpg' %}" alt="image01" width="800" height="600"><div>2018/07/30第十五周</div>
+        </a>
+        <a href="#"><img src="{% static 'blog/images/2.jpg' %}" alt="image02"><div>2018/07/30第十五周</div></a>
+        <a href="#"><img src="{% static 'blog/images/3.jpg' %}"><div>2018/08/30第十九周</div></a>
+        {% for picture in picture_list %}
+          <a href="#"><img src="{{ picture.picurl }}"><div>2018/08/30第十九周</div></a>
+        {% empty %}
+          暂无文章！
+        {% endfor %}
+        <a href="#"><img src="{% static 'blog/images/4.jpg' %}"><div>2018/08/30第十九周</div></a>
+        <a href="#"><img src="{% static 'blog/images/5.jpg' %}"><div>2018/09/28第二十三周</div></a>
+      </div>
+      <nav>
+        <span class="dg-prev">&lt;</span>
+        <span class="dg-next">&gt;</span>
+      </nav>
+    </section>
+  </div>
+
+  <div id="s1"><img src="{% static 'blog/css/1.gif' %}"></div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'blog/js/gallery.js' %}"></script>
+<script type="text/javascript" src="{% static 'blog/js/jquery.magnific-popup.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'blog/js/image.js' %}"></script>
+<script type="text/javascript">
+  $(function() {
+    $('#dg-container').gallery();
+  });
+</script>
+</body>
+</html>

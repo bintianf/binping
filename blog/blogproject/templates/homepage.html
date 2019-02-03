@@ -1,0 +1,54 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bin &amp; Ping</title>
+    <!-- meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="{% static 'blog/css/homepage.css' %}">
+    <noscript><link rel="stylesheet" href="{% static 'blog/css/noscript.css' %}" /></noscript>
+</head>
+
+  <body class="landing is-preload">
+
+    <div id="wrapper">
+      <div id="bg"></div>
+      <div id="overlay"></div>
+      <div id="main">
+
+        <!-- Header -->
+        <header id="header">
+          <section id="banner">
+              <h2>Bin &amp; Ping's 首页</h2>
+          </section>
+            <!-- <p>Security Chief &nbsp;&bull;&nbsp; Cyborg &nbsp;&bull;&nbsp; Never asked for this</p> -->
+          <div id="nav-bar">
+            <a href="#"><div><img src="{% static 'blog/images/bg1.jpg' %}" /></div>宝贝相册</a>
+            <a href="#"><div><img src="{% static 'blog/images/bg2.jpg' %}" /></div>个人博客</a>
+      </div>
+          </header>
+
+        <!-- Footer -->
+          <footer id="footer">
+            <span class="copyright">2019 &copy;<a href="http://www.binping.tech"> Binping.tech</a>.</span>
+          </footer>
+
+      </div>
+    </div>
+    <script src="{% static 'blog/js/jquery_and_jqueryui.js'%}"></script>
+    <script src="{% static 'blog/js/homepage.js'%}"></script>
+<!--     <script>
+      window.onload = function() { document.body.classList.remove('is-preload'); }
+      window.ontouchmove = function() { return false; }
+      window.onorientationchange = function() { document.body.scrollTop = 0; }
+    </script> -->
+  </body>
+
+<body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script> -->
+</html>
