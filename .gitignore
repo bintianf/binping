@@ -104,4 +104,3 @@ venv.bak/
 .mypy_cache/
 blog/blogproject/fabfile.py
 blog/blogproject/blogproject/settings.py
-blog/blogproject/blogproject/settings.py
