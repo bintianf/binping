@@ -13,7 +13,7 @@ class Age(models.Model):
 
 class Group(models.Model):
     name = models.CharField(max_length=100)
-    created_time = models.DateTimeField()
+    created_time = models.DateTimeField(blank=True, null=True)
     age = models.ForeignKey(Age, on_delete=models.CASCADE)
     def __str__(self):
         return self.name
