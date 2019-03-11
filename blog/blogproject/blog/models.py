@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from django.utils.six import python_2_unicode_compatible
 from django.urls import reverse
 
 class Category(models.Model):
@@ -55,7 +54,7 @@ class Post(models.Model):
     # 如果你对 ForeignKey、ManyToManyField 不了解，请看教程中的解释，亦可参考官方文档：
     # https://docs.djangoproject.com/en/1.10/topics/db/models/#relationships
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    tags = models.ManyToManyField(Tag, blank=True)
+    tags = models.ManyToManyField(Tag)
     # 新增 views 字段记录阅读量
     views = models.PositiveIntegerField(default=0)
     def increase_views(self):

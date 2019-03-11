@@ -17,12 +17,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.urls import path
 from blog.rss import AllPostsRssFeed
+from blogproject import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'', include('blog.urls')),
-    url(r'', include('comments.urls')),
-    url(r'', include('baby.urls')),
+    path('', views.home, name='home'),
+    url(r'^blog/', include('blog.urls')),
+    url(r'^comments/', include('comments.urls')),
+    url(r'^baby/', include('baby.urls')),
     url(r'^all/rss/$', AllPostsRssFeed(), name='rss'),
     url(r'^search/', include('haystack.urls')),
 ]

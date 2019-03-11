@@ -271,7 +271,7 @@ input, select, textarea {
 		transform: translate3d(0,0,0);
 	/* Set your background with this */
 
-		background: #6b75b3 url(../images/bg.jpg) bottom left;
+		background: #6b75b3 url(https://yyp666.github.io/tuchuang/background/bg.jpg) bottom left;
 		background-repeat: repeat-x;
 		height: 100%;
 		left: 0;
@@ -391,23 +391,6 @@ input, select, textarea {
 		}
 	}
 
-	#overlay {
-		-moz-animation: overlay 1.5s 1.5s forwards;
-		-webkit-animation: overlay 1.5s 1.5s forwards;
-		-ms-animation: overlay 1.5s 1.5s forwards;
-		animation: overlay 1.5s 1.5s forwards;
-		background-attachment: fixed, fixed;
-		background-image: url("images/overlay-pattern.png"), url("images/overlay.svg");
-		background-position: top left, center center;
-		background-repeat: repeat, no-repeat;
-		background-size: auto, cover;
-		height: 100%;
-		left: 0;
-		opacity: 0;
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
 
 /* Main */
 

@@ -1,16 +1,17 @@
 {% extends 'babymain.html' %}
 {% load picture_tags %}
+{% url "group" as url_group %}
 
 {% block main %}
             <!-- Sidebar Links -->
             <ul class="list-unstyled components">
               <p>时间轴</p>
-              <li class="active">
+              <li>
                 <a href="{% url 'baby:babyindex' %}">最新</a>
               </li>
               {% get_ages as age_list %}
                 {% for age in age_list %}
-                  <li><a href="{% url 'baby:age' age.pk %}">{{ age.name }}(共 {{ age.picture_set.count }} 张)</a></li>
+                    <li {% if age.name == cur_age.name %} class = "active" {% endif %}><a id="sparkley" href="{% url 'baby:age' age.pk %}">{{ age.name }}(共 {{ age.picture_set.count }} 张)</a></li>
                 {% endfor %}
             </ul>
             <ul class="list-unstyled CTAs">
@@ -33,7 +34,7 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             {% for group in group_list %}
-                            <li class="nav-item active">
+                            <li {% if group.name == recent_group.name %} class="nav-item active" {% endif %}>
                                 <a class="nav-link" href="{% url 'baby:group' group.pk %}">{{ group.name }}</a>
                             </li>
                             {% empty %}

@@ -26,9 +26,9 @@ def index(request):
 """
 
 
-def index(request):
-    post_list = Post.objects.all()
-    return render(request, 'blog/index.html', context={'post_list': post_list})
+# def index(request):
+#     post_list = Post.objects.all()
+#     return render(request, 'blog/index.html', context={'post_list': post_list})
 
 
 class IndexView(ListView):
