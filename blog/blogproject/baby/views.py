@@ -5,7 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView
 from django.utils.text import slugify
 
-from .models import Picture, Age, Group
+# from .models import Picture, Age, Group
 
 def babyindex(request):
     recent_group = Group.objects.latest('created_time')
