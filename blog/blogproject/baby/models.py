@@ -36,8 +36,8 @@ class Picture(models.Model):
     body = models.TextField(blank=True)
 
     # 这两个列分别表示文章的创建时间和最后一次修改时间，存储时间的字段用 DateTimeField 类型。
-    created_time = models.DateTimeField()
-    modified_time = models.DateTimeField()
+    created_time = models.DateTimeField(blank=True, null=True)
+    modified_time = models.DateTimeField(blank=True, null=True)
 
     # 这是分类与标签，分类与标签的模型我们已经定义。
     # 我们规定一个图片只能对应一个分类，但是一个分类下可以有多个图片，所以我们使用的是 ForeignKey，即一对多的关联关系。
