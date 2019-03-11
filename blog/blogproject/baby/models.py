@@ -13,7 +13,7 @@ class Age(models.Model):
 
 class Group(models.Model):
     name = models.CharField(max_length=100)
-    created_time = models.DateTimeField()
+    created_time = models.DateTimeField(blank=True, null=True,default=datetime.date.today)
     age = models.ForeignKey(Age, on_delete=models.CASCADE)
     def __str__(self):
         return self.name
@@ -36,8 +36,8 @@ class Picture(models.Model):
     body = models.TextField(blank=True)
 
     # 这两个列分别表示文章的创建时间和最后一次修改时间，存储时间的字段用 DateTimeField 类型。
-    created_time = models.DateTimeField()
-    modified_time = models.DateTimeField()
+    created_time = models.DateTimeField(blank=True, null=True,default=datetime.date.today)
+    modified_time = models.DateTimeField(blank=True, null=True,default=datetime.date.today)
 
     # 这是分类与标签，分类与标签的模型我们已经定义。
     # 我们规定一个图片只能对应一个分类，但是一个分类下可以有多个图片，所以我们使用的是 ForeignKey，即一对多的关联关系。
